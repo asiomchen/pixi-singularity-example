@@ -1,0 +1,17 @@
+[workspace]
+authors = ["Anton Siomchen <41703271+asiomchen@users.noreply.github.com>"]
+channels = ["conda-forge"]
+name = "pixi-singularity-example"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+dev = "uvicorn my_project:app --reload"
+start = "uvicorn my_project:app --host 0.0.0.0"
+
+[dependencies]
+fastapi = "*"
+uvicorn = "*"
+pytest = "*"
+ruff = "*"
+mypy = "*"
